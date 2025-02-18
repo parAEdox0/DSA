@@ -12,7 +12,7 @@ class LinkedList:
         new_node.next = self.head
         self.head = new_node
 
-
+    
 
 list1 = LinkedList()
 list1.insert_at_end(10)
