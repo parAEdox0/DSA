@@ -12,6 +12,16 @@ class LinkedList:
         new_node.next = self.head
         self.head = new_node
 
+    def insert_at_end(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        current = self.head
+        while current.next is not None:
+            current = current.next
+        current.next = new_node
+
     def traverse(self):
         if self.head is None:
             print("Null")
@@ -24,4 +34,6 @@ class LinkedList:
 
 list1 = LinkedList()
 list1.insert_at_end(10)
+list1.insert_at_end(20)
+list1.insert_at_beginning(5)
 list1.traverse()
