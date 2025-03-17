@@ -31,9 +31,23 @@ class LinkedList:
             print(f"{current.data} -->", end = " ")
             current = current.next
         print("Null")
+    
+    def insert_at_index(self, data, index):
+        new_node = Node(data)
+        if index == 0:
+            new_node.next = self.head
+            self.head = new_node
+            return
+        i = 0
+         
+
+
+
+
 
 list1 = LinkedList()
 list1.insert_at_end(10)
 list1.insert_at_end(20)
 list1.insert_at_beginning(5)
+list1.insert_at_index(2, 0)
 list1.traverse()
